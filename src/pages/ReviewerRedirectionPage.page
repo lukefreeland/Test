@@ -1,3 +1,0 @@
-<apex:page standardController="Expert_Reviewer_Form__c" extensions="ReviewerRedirectionController" action="{!RedirectPage}" >
-<apex:pageMessages />  
-</apex:page>

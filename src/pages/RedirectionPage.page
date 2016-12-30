@@ -1,3 +1,0 @@
-<apex:page standardController="Contact" extensions="RedirectionController" action="{!RedirectPage}" >
-<apex:pageMessages />  
-</apex:page>

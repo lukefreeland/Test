@@ -1,3 +1,0 @@
-<apex:page >
-<!---  standardController="Save_the_Date__c" extensions="Feedbackquestioncreator"  action="{!Submit}"  --->
-</apex:page>

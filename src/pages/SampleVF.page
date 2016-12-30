@@ -1,3 +1,0 @@
-<apex:page controller="SampleCntrl" action="{!sampleAction}">
-  
-</apex:page>

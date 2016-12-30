@@ -1,9 +1,0 @@
-Dear {!Save_the_Date__c.Expert_Reviewer_Name__c}
-
-Please click on the link below to answer the Pre-Vetting Questions.
-
-https://beta-cncs.cs32.force.com/externalreviewers/FeedbackScore?id={!Expert_Reviewer_Form__c.Id}&sfdc.override=1&pageMode=edit
-
-
-Thanks,
-CNCS

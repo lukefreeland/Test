@@ -1,4 +1,0 @@
-{!User.FirstName} {!User.LastName},  NOFO ID {!NOFA__c.Name} has been submitted for approval. 
-
-Thank you, 
-GMM System Administrator

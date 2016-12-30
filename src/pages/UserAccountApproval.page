@@ -1,8 +1,0 @@
-<apex:page standardController="Contact" extensions="UpdateFields" action="{!accept}">
-<html lang="en-US"> 
-</html>
-    <apex:form >
-        <apex:pageMessages />
-    
-    </apex:form>
-</apex:page>

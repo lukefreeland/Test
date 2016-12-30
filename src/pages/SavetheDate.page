@@ -1,3 +1,0 @@
-<apex:page standardController="NOFA_Group__c" extensions="SavetheDateAnnouncements" action="{!DateAnnouncements}">
-  
-</apex:page>

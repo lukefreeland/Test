@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <available>true</available>
-    <encodingKey>ISO-8859-1</encodingKey>
-    <name>Notification when current date is 15 days less than the date entered in the Due</name>
-    <style>none</style>
-    <subject>The Management Decision for [OIG Report Name] is due in 15 days.</subject>
-    <type>text</type>
-</EmailTemplate>
