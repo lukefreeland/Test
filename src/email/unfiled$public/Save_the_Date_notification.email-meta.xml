@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Save the Date notification</name>
+    <style>none</style>
+    <subject>Save the Date: {!Save_the_Date__c.Fiscal_Year__c} {!Save_the_Date__c.Corporate_Program_Name__c} Review - {!Save_the_Date__c.Role_Type__c}</subject>
+    <type>text</type>
+</EmailTemplate>

@@ -1,0 +1,5 @@
+<apex:page standardController="Stages__c" extensions="AddApplicationToPanelCont" action="{!AssignApplication}">
+
+
+  
+</apex:page>

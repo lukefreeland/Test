@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>salesforce.com</loginFooterText>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#B1BAC1</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#51606E</secondaryColor>
+        <tertiaryColor>#DDE4E9</tertiaryColor>
+        <tertiaryComplementColor>#222222</tertiaryComplementColor>
+        <zeronaryColor>#51606E</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>cncs_sf_dev_admins@plan-sys.com</emailSenderAddress>
+    <emailSenderName>External Reviewers</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <logoutUrl>https://beta-cncs.cs32.force.com/externalreviewers</logoutUrl>
+    <networkMemberGroups>
+        <permissionSet>View_Global_Header</permissionSet>
+        <profile>Admin</profile>
+        <profile>Expert Reviewers</profile>
+    </networkMemberGroups>
+    <picassoSite>External_Reviewers_C</picassoSite>
+    <selfRegProfile>expert reviewers</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>External_Reviewers</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>Reviewer_Application</customTab>
+        <customTab>Expert_Review_Panel__c</customTab>
+        <customTab>Paneling__c</customTab>
+        <customTab>Save_the_Date__c</customTab>
+        <customTab>Expert_Reviewer_Form__c</customTab>
+        <defaultTab>Chatter</defaultTab>
+        <standardTab>Chatter</standardTab>
+        <standardTab>home</standardTab>
+        <standardTab>report</standardTab>
+    </tabs>
+    <urlPathPrefix>externalreviewers</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

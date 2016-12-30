@@ -1,0 +1,11 @@
+Hi {!Expert_Reviewer_Form__c.OwnerFullName},
+
+An Expert Reviewer Form has been generated with Form ID : 
+{!Expert_Reviewer_Form__c.Name}
+
+Please follow the link and save your questions. 
+https://beta-cncs.cs32.force.com/externalreviewers/FeedbackScore?id={!Expert_Reviewer_Form__c.Id}&sfdc.override=1&pageMode=edit 
+
+
+Thanks, 
+CNCS

@@ -1,0 +1,5 @@
+<apex:page standardController="Save_the_Date__c" extensions="QuestionnaireFormSetup" action="{!trainingQuestion}">
+
+
+
+</apex:page>

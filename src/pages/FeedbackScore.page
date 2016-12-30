@@ -1,0 +1,112 @@
+<apex:page standardcontroller="Expert_Reviewer_Form__c" extensions="FeedbackScoreCtrl" >
+<script>
+function foo(data){    
+    alert("Hello ");//this is displyed
+    var d = document.getElementById(data).value;
+alert('********The field value is ********'+d);// unable to get the value
+}
+ </script>
+
+
+  <apex:form >
+    <apex:pageBlock title="Expert Reviewer Form">  
+        <apex:pageBlocksection columns="1" title="Pre-Vetting Questions" id="tsection1" rendered="{!!issetupequestion}" >
+            
+               <apex:panelGrid > 
+                
+                <apex:pageBlockSectionItem rendered="{!if(mode != 'edit',TRUE,FALSE)}">
+                     <apex:repeat value="{!lstWrap}" var="f1" id="therepeat1"  >
+                        <apex:outputPanel >
+                            <apex:outputLabel value="Question" style="font-weight:bold"/> <br/>
+                            <apex:outputtext value="{!f1.fb.Question_1__c}"/><br/><br/>
+
+                            <apex:outputLabel value="Answer" style="font-weight:bold"/><br/>
+                            <apex:outputtext value="{!f1.fb.Answer_1__c}" id="input">
+                            </apex:outputtext><br/><br/>                     
+                          </apex:outputPanel>
+                         </apex:repeat><br/>
+                    </apex:pageBlockSectionItem>
+               
+                    <apex:pageBlockSectionItem rendered="{!if(mode = 'edit',TRUE,FALSE)}" >
+                    <apex:repeat value="{!lstWrap}" var="f" id="therepeat" >
+                        <apex:outputPanel >
+                            <apex:outputLabel value="Question" style="font-weight:bold"/> <br/>
+                            <apex:outputtext value="{!f.fb.Question_1__c}"/><br/><br/>
+
+                            <apex:outputLabel value="Answer" style="font-weight:bold"/><br/>
+                            <apex:inputtext value="{!f.fb.Answer_1__c}" id="input">
+                          
+                            </apex:inputtext><br/><br/>                     
+                          </apex:outputPanel>
+                        </apex:repeat><br/>
+                    </apex:pageBlockSectionItem>
+               
+            
+                   
+               </apex:panelGrid>
+           
+            </apex:pageBlockSection> 
+                
+            <apex:pageBlocksection columns="1" title="Training Questions" id="tsection2" rendered="{!issetupequestion}">
+            
+               <apex:panelGrid > 
+               
+                   <apex:pageBlockSectionItem rendered="{!if(mode != 'edit',TRUE,FALSE)}"> 
+                     <apex:repeat value="{!lstWrap}" var="f1" id="therepeat1"  >
+                        <apex:outputPanel >
+                            <apex:outputLabel value="Question" style="font-weight:bold"/> <br/>
+                            <apex:outputtext value="{!f1.fb.Question_1__c}"/><br/><br/>
+
+                            <apex:outputLabel value="Answer" style="font-weight:bold"/><br/>
+                            <apex:outputtext value="{!f1.fb.Answer_1__c}" id="input">
+                            </apex:outputtext><br/><br/>                     
+                             </apex:outputPanel>
+                         </apex:repeat><br/>
+                    </apex:pageBlockSectionItem>
+                    
+                    
+                    <apex:pageBlockSectionItem rendered="{!if(mode = 'edit',TRUE,FALSE)}" >
+                    <apex:repeat value="{!lstWrap}" var="f" id="therepeat" >
+                        <apex:outputPanel >
+                            <apex:outputLabel value="Question" style="font-weight:bold"/> <br/>
+                            <apex:outputtext value="{!f.fb.Question_1__c}"/><br/><br/>
+
+                            <apex:outputLabel value="Answer" style="font-weight:bold"/><br/>
+                            <apex:inputtext value="{!f.fb.Answer_1__c}" id="input">
+                          
+                          
+                            <apex:actionsupport event="onchange" action="{!calculate}" rerender="summation" >
+                            <apex:param name="fquestion"  value="{!f.fb.Question_1__c}" assignTo="{!fid}" />
+                          
+
+                            </apex:actionsupport>
+                            </apex:inputtext><br/><br/>                     
+                            <apex:outputpanel id="summation">
+                            
+                            <apex:outputLabel value="Score" style="font-weight:bold"/>
+                            <apex:outputtext value="{!f.stotal}%"/><br/><br/>
+                            </apex:outputpanel>
+                        </apex:outputPanel>
+                        </apex:repeat><br/>
+                    </apex:pageBlockSectionItem>
+               
+            
+                    
+               </apex:panelGrid>
+               <apex:outputPanel id="tscore">
+            <apex:OutputLabel value="Total Score" style="font-weight:bold;padding-left:150px">
+            <apex:outputtext value="{!totalscore}"/>  
+            </apex:OutputLabel><br/><br/>
+            </apex:outputPanel>
+           
+           
+            </apex:pageBlockSection> 
+            
+            
+            
+           
+        <apex:commandButton value="Save" action="{!save}" rerender="tsection,tscore"/>
+        <apex:commandButton value="Edit" action="{!editRec}" rerender="tsection,tscore"/>
+    </apex:pageBlock>     
+  </apex:form> 
+</apex:page>

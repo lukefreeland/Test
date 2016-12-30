@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <branding>
+        <loginFooterText>salesforce.com</loginFooterText>
+        <primaryColor>#1797C0</primaryColor>
+        <primaryComplementColor>#FFFFFF</primaryComplementColor>
+        <quaternaryColor>#CFEEF8</quaternaryColor>
+        <quaternaryComplementColor>#222222</quaternaryComplementColor>
+        <secondaryColor>#1797C0</secondaryColor>
+        <tertiaryColor>#1797C0</tertiaryColor>
+        <tertiaryComplementColor>#FFFFFF</tertiaryComplementColor>
+        <zeronaryColor>#1797C0</zeronaryColor>
+        <zeronaryComplementColor>#FFFFFF</zeronaryComplementColor>
+    </branding>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <emailSenderAddress>cncs_sf_dev_admins@plan-sys.com</emailSenderAddress>
+    <emailSenderName>Grants and Projects Portal</emailSenderName>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <logoutUrl>https://beta-cncs.cs32.force.com/granteeportal</logoutUrl>
+    <networkMemberGroups>
+        <permissionSet>cb3__CloudBudget_Salesforce</permissionSet>
+        <permissionSet>Grantee_Offercer_Permission_for_note_and_attachment</permissionSet>
+        <permissionSet>NCCC_Developer</permissionSet>
+        <permissionSet>View_Global_Header</permissionSet>
+        <permissionSet>cprh__History_Plus</permissionSet>
+        <permissionSet>cb3__CloudBudget</permissionSet>
+        <permissionSet>Grantee_Admin</permissionSet>
+        <profile>Admin</profile>
+        <profile>Grantee Admin</profile>
+        <profile>Grants officer</profile>
+        <profile>Customer Community Login User</profile>
+        <profile>Customer Community Plus Login User</profile>
+        <profile>Applicant</profile>
+    </networkMemberGroups>
+    <picassoSite>Applicant_or_Recipient_of_CNCS_Resource_C</picassoSite>
+    <selfRegProfile>applicant</selfRegProfile>
+    <selfRegistration>true</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Applicant_or_Recipient_of_CNCS_Resource</site>
+    <status>Live</status>
+    <tabs>
+        <customTab>NOFA__c</customTab>
+        <customTab>Application3__c</customTab>
+        <customTab>Award_Reporting__c</customTab>
+        <customTab>Award__c</customTab>
+        <customTab>Project__c</customTab>
+        <defaultTab>home</defaultTab>
+        <standardTab>home</standardTab>
+        <standardTab>Account</standardTab>
+        <standardTab>Contact</standardTab>
+        <standardTab>Dashboard</standardTab>
+        <standardTab>report</standardTab>
+    </tabs>
+    <urlPathPrefix>granteeportal</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Prime_Application__c$Name</field>
+    </columns>
+    <columns>
+        <field>Prime_Application__c.Applications__r$Name</field>
+    </columns>
+    <columns>
+        <field>Prime_Application__c.Applications__r.Award__r$Name</field>
+    </columns>
+    <columns>
+        <field>Prime_Application__c.Applications__r.Award__r$RecordType</field>
+    </columns>
+    <description>Prime App Awards with Sub App Awards. Bug 8276.</description>
+    <filter>
+        <criteriaItems>
+            <column>Prime_Application__c$Id</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Prime_Application__c.Applications__r.Award__r$RecordType</column>
+            <operator>equals</operator>
+            <value>Award__c.Sub_App_Award</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Prime Awards with Sub Awards</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Prime_Apps_with_Sub_Apps_and_Awards_and_Slots__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Prime_Application__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Prime_Application__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

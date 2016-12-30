@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notification 30days before the Due Date for Management Decision</name>
+    <style>none</style>
+    <subject>The Management Decision for {!Agency_wide_Audit__c.Single_Audit_Name__c} is due in 30 days.</subject>
+    <type>text</type>
+</EmailTemplate>

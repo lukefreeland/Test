@@ -1,0 +1,13 @@
+Hello {!Save_the_Date__c.Expert_Reviewer_Name__c}
+
+Attached you will find an invitation to participate in the {!Save_the_Date__c.Fiscal_Year__c}{!Save_the_Date__c.Corporate_Program_Name__c}  grant review.  If you are interested and available for this opportunity, please follow the instructions for responding included in the flyer.
+
+https://beta-cncs.cs32.force.com/externalreviewers/{!Save_the_Date__c.Id}
+
+Thank you for your interest in participating as an expert reviewer for the Corporation for National and Community Service.
+
+Best,
+{!User.Name}
+
+Corporation for National and Community Service
+Office of Grants, Policy and Operations"

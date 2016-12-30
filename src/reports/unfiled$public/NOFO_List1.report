@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>NOFA__c.Corporate_Program_Code__c</field>
+    </columns>
+    <columns>
+        <field>NOFA__c.CNCS_Corporate_Program__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>NOFA__c.NOFA_name__c</field>
+    </columns>
+    <columns>
+        <field>NOFA__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>NOFA__c.NOFA_Type__c</field>
+    </columns>
+    <description>List of NOFOs accepting applications</description>
+    <filter>
+        <criteriaItems>
+            <column>NOFA__c.Legacy_NOFA_ID__c</column>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NOFA__c.Fiscal_Yr__c</column>
+            <operator>equals</operator>
+            <value>2016</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NOFA__c.NOFA_Active_Inactive__c</column>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>NOFA__c.Fiscal_Yr__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NOFO List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$NOFA__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

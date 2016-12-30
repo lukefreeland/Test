@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notification 60days before the Due Date for Notice of Final Action</name>
+    <style>none</style>
+    <subject>The Notice of Final Action for {!Agency_wide_Audit__c.OIG_Report_Name__c} is due in 60 days</subject>
+    <type>text</type>
+</EmailTemplate>

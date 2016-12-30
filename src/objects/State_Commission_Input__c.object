@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>State Commission input on Concept Paper and Applications when</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Application_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Application ID</label>
+        <referenceTo>Application3__c</referenceTo>
+        <relationshipLabel>State Commission Input</relationshipLabel>
+        <relationshipName>State_Commission_Input</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Application_Input_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <formula>Application_ID__r.NOFA_RFP__r.Application_Input_Deadline__c</formula>
+        <label>Application Input Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Concept_Paper_Input_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <formula>Application_ID__r.NOFA_RFP__r.Concept_Paper_Input_Deadline__c</formula>
+        <label>Concept Paper Input Deadline</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Endorsement__c</fullName>
+        <externalId>false</externalId>
+        <label>Endorsement</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do no support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Executive_Summary__c</fullName>
+        <description>Executive Summary of the Application/Concept Paper.</description>
+        <externalId>false</externalId>
+        <label>Executive Summary</label>
+        <length>60000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>State_Commission_User_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.State__c</formula>
+        <label>State Commission User - State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>State Commission Input</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SCI - {0000000}</displayFormat>
+        <label>State Commission Input Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>State Commission Input</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Application</fullName>
+        <active>true</active>
+        <description>State Commission Input for an Application</description>
+        <label>Application</label>
+        <picklistValues>
+            <picklist>Endorsement__c</picklist>
+            <values>
+                <fullName>Do no support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Concept_Paper</fullName>
+        <active>true</active>
+        <description>State Commission Input for a Concept Paper</description>
+        <label>Concept Paper</label>
+        <picklistValues>
+            <picklist>Endorsement__c</picklist>
+            <values>
+                <fullName>Do no support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Support</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Application_ID_Read_Only</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED( Application_ID__c )</errorConditionFormula>
+        <errorDisplayField>Application_ID__c</errorDisplayField>
+        <errorMessage>Cannot change Application ID</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Application_Input_Deadline_Complete</fullName>
+        <active>true</active>
+        <description>Application Input cannot be given after the Deadline</description>
+        <errorConditionFormula>DATEVALUE(  LastModifiedDate ) &gt; Application_Input_Deadline__c</errorConditionFormula>
+        <errorMessage>You cannot add Input after the Application Input Deadline</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Concept_Paper_Input_Deadline_Complete</fullName>
+        <active>true</active>
+        <description>Concept Paper Input cannot be given after the Deadline</description>
+        <errorConditionFormula>DATEVALUE(LastModifiedDate) &gt;   Concept_Paper_Input_Deadline__c</errorConditionFormula>
+        <errorMessage>You cannot add Input after the Concept Paper Input Deadline</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Custom</fullName>
+        <availability>online</availability>
+        <description>Button to populate fields from Application/Concept Paper</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/34.0/connection.js&quot;)}
+
+var myquery = &quot;SELECT Id, Name, RecordType.Name, App_State_Commission_Input_Deadline__c from Application3__c Where Id = &apos;{!Application3__c.Id}&apos; &quot;;
+
+
+var result = sforce.connection.query(myquery);
+var records = result.getArray(&quot;records&quot;); 
+
+if(records[0])
+{
+ var app = records[0]; 
+ var today = new Date();
+ var dd = today.getDate();
+ var mm = today.getMonth()+1; 
+ var yyyy = today.getFullYear();
+ if(dd&lt;10){
+  dd=&apos;0&apos;+dd
+ } 
+ if(mm&lt;10){
+  mm=&apos;0&apos;+mm
+ } 
+ var todaysDate = yyyy+&apos;-&apos;+mm+&apos;-&apos;+dd;
+
+
+ if((app.App_State_Commission_Input_Deadline__c &gt; todaysDate)&amp;&amp; app.RecordType.Name == &apos;Application&apos;){
+	if(&apos;{!$Profile.Name}&apos; == &apos;State Commission Profile&apos;){
+	window.location.replace(&quot;/statecommission/a3Q/e?CF00Nr0000000Zz4n={!Application3__c.Name}&amp;CF00Nr0000000Zz4n_lkid = {!Application3__c.Id}&amp;retURL=%2F{!Application3__c.Id}&amp;{!State_Commission_Input__c.RecordTypeId} = &apos;012r00000004Skp&apos;&quot;);
+	} 
+
+	else {
+	window.location.replace(&quot;/a3Q/e?CF00Nr0000000Zz4n={!Application3__c.Name}&amp;CF00Nr0000000Zz4n_lkid = {!Application3__c.Id}&amp;retURL=%2F{!Application3__c.Id}&amp;{!State_Commission_Input__c.RecordTypeId} = &apos;012r00000004Skp&apos;&quot;);
+	}
+  }
+  else if((app.App_State_Commission_Input_Deadline__c &gt; todaysDate) &amp;&amp; app.RecordType.Name == &apos;Concept Paper&apos;){
+	if(&apos;{!$Profile.Name}&apos; == &apos;State Commission Profile&apos;){
+	window.location.replace(&quot;/statecommission/a3Q/e?CF00Nr0000000Zz4n={!Application3__c.Name}&amp;CF00Nr0000000Zz4n_lkid = {!Application3__c.Id}&amp;retURL=%2F{!Application3__c.Id}&amp;{!State_Commission_Input__c.RecordTypeId} = &apos;012r00000004Sku&apos;&quot;);
+	} 
+	else {
+	window.location.replace(&quot;/a3Q/e?CF00Nr0000000Zz4n={!Application3__c.Name}&amp;CF00Nr0000000Zz4n_lkid = {!Application3__c.Id}&amp;retURL=%2F{!Application3__c.Id}&amp;{!State_Commission_Input__c.RecordTypeId} = &apos;012r00000004Sku&apos;&quot;);
+	}
+  }
+ else{
+   alert(&apos;State Commission Input cannot be created after the Deadline&apos;);
+ }
+}</url>
+    </webLinks>
+</CustomObject>

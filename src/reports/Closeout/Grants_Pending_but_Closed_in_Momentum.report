@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Award__c.Grant_Number__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Award__c.Organization_Legal_Name__c</field>
+    </columns>
+    <description>Grants Pending but Closed in Momentum</description>
+    <filter>
+        <criteriaItems>
+            <column>Award__c.Grant_Status__c</column>
+            <operator>equals</operator>
+            <value>Being Closed,Awarded,Obligated,Returned for Rework,Expired</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Grants Pending but Closed in Momentum</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Award__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Award__c.Project_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

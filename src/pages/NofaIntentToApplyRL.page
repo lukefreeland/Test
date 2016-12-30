@@ -1,0 +1,7 @@
+<apex:page standardController="NOFA__c" showHeader="false"> 
+<html lang="en-US"> 
+</html>  
+ <c:relatedlists recId="{!NOFA__c.Id}" objType="Application3__c" fieldsList="Name,Organization__c,Status__c,Grantee_Status__c,Submitted_By__c" recordType="Notification of Intent to Apply" RelationField="Nofa_Rfp__c" rendered="{!($Profile.Name != 'Applicant' && $Profile.Name != 'Grantee Admin' && $Profile.Name != 'State Commission Profile')}" />          
+ <c:relatedlists recId="{!NOFA__c.Id}" objType="Application3__c" fieldsList="Name,Organization__c,Grantee_Status__c,Submitted_By__c" recordType="Notification of Intent to Apply" RelationField="Nofa_Rfp__c" rendered="{!($Profile.Name == 'Applicant' || $Profile.Name == 'Grantee Admin' || $Profile.Name == 'State Commission Profile')}" />          
+
+</apex:page>
